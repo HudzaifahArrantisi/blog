@@ -1,0 +1,169 @@
+/* Global styles */
+body {
+  margin: 0;
+  background-color: black;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+.text-overlay h1 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+nav {
+  background-color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+p{
+  color: aliceblue;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(70%);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-overlay h1 {
+  font-size: 2.5rem;
+}
+
+.text-overlay p, .text-overlay h3 {
+  margin: 10px 0;
+}
+
+/* About section */
+.intro, .About {
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-image img {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  margin: 20px auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-container p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  .text-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .text-overlay p, .text-overlay h3 {
+    font-size: 14px;
+  }
+
+  .image-container {
+    max-width: 90%;
+  }
+
+  .profile-image img {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 12px;
+  }
+
+  .text-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-overlay p, .text-overlay h3 {
+    font-size: 12px;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
